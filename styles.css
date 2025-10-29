@@ -324,3 +324,78 @@ footer {
     margin-top: 30px;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
 }
+
+/* === MEJORAS MÓVIL - CASITA COLONIAL (SOLO PARA VERTICAL) === */
+@media (max-width: 768px) {
+    .hero .hero-slider,
+    .hero .hero-slider img {
+        height: 85vh !important;
+        object-fit: cover;
+    }
+    
+    .hero-content {
+        top: 55% !important;
+    }
+
+    nav ul {
+        gap: 12px;
+        padding: 15px 0;
+    }
+    
+    nav ul li a {
+        font-size: 1.1rem;
+        padding: 10px 20px;
+        display: block;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.1);
+    }
+    
+    nav ul li a:hover {
+        background: #ff6f61;
+        color: white !important;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.6rem !important;
+        padding: 0 10px;
+    }
+
+    .description h3, .rules h3, .h8 {
+        font-size: 1.8rem !important;
+    }
+
+    .description p, .rules p {
+        font-size: 1rem !important;
+        padding: 0 15px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 0 10px;
+    }
+    
+    .gallery img {
+        height: 280px !important;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .social-media {
+        flex-direction: column;
+        gap: 20px;
+        padding: 25px 15px;
+    }
+    
+    .social-item img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .social-item p {
+        font-size: 0.95rem;
+    }
+}
