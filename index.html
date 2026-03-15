@@ -32,7 +32,7 @@
 
     <meta name="author" content="Casita Colonial Tepoztlán">
 
-    <meta name="keywords" content="hospedaje,morelos, alojamiento, renta vacacional, casa en renta, cabañas en renta, hotel, posada, casa de descanso, hospedaje económico, alojamiento familiar, hospedaje con alberca, hospedaje con vista panorámica, hospedaje para parejas, alojamiento rural, habitaciones en renta, hospedaje de fin de semana, hotel boutique, alojamiento turístico, hospedaje céntrico, cabañas románticas, renta de habitaciones,
+    <meta name="keywords" content="hospedaje,morelos, alojamiento, renta vacacional,mx, casa en renta, cabañas en renta, hotel, posada, casa de descanso, hospedaje económico, alojamiento familiar, hospedaje con alberca, hospedaje con vista panorámica, hospedaje para parejas, alojamiento rural, habitaciones en renta, hospedaje de fin de semana, hotel boutique, alojamiento turístico, hospedaje céntrico, cabañas románticas, renta de habitaciones,
     hospedaje en Tepoztlán, alojamiento en Tepoztlán Morelos, cabañas en Tepoztlán, hospedaje cerca del Tepozteco, casa en renta en Tepoztlán, hotel en el centro de Tepoztlán, posada en Tepoztlán, hospedaje en el pueblo mágico, alojamiento cerca del centro, hospedaje con estacionamiento en Tepoztlán,
     hospedaje tranquilo, alojamiento romántico, lugar para descansar, alojamiento con jardín, hospedaje con vista a la montaña, cabañas para desconectarse, experiencia natural, escapada de fin de semana, hospedaje pet friendly, alojamiento con chimenea, hospedaje con desayuno incluido, alojamiento sustentable, ambiente familiar, lugar para relajarse, retiro espiritual,
     hospedaje cerca de mí, mejores lugares para hospedarse, alojamiento económico, dónde dormir en Tepoztlán, cabañas con buena reseña, reserva de hospedaje en línea, alojamiento con WiFi, hospedaje con buenas opiniones, hospedaje con cocina, casas en renta para vacaciones,
@@ -453,16 +453,16 @@
 
             if (heroTextElement) {
                 // Escuchar el evento de Slick Slider justo cuando empieza a cambiar la foto
-                $('.hero-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
-                    
+                $('.hero-slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+
                     // Iniciar el efecto de desvanecimiento (fade-out)
                     heroTextElement.classList.add("fade-out");
-                    
+
                     setTimeout(() => {
                         // Cambiar la frase usando el índice de la foto siguiente
                         const phraseIndex = nextSlide % heroPhrases.length;
                         heroTextElement.innerText = heroPhrases[phraseIndex];
-                        
+
                         // Quitar el fade-out para que aparezca (fade-in)
                         heroTextElement.classList.remove("fade-out");
                     }, 800); // Darle unos milisegundos para que termine la transición CSS de invisible
