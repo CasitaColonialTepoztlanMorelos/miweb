@@ -59,16 +59,10 @@ header {
     background: var(--primary);
     color: #fff;
     padding: 16px 0;
-    position: sticky;
-    top: 0;
+    position: static;
     z-index: 100;
     box-shadow: 0 2px 12px rgba(0,0,0,0.15);
     transition: padding 0.3s ease, box-shadow 0.3s ease;
-}
-
-header.scrolled {
-    padding: 10px 0;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
 }
 
 .header-flex {
@@ -306,12 +300,16 @@ body[style*="top"] {
     text-align: center;
     color: #fff;
     overflow: hidden;
+    padding: 0;
+    height: 85vh;
+    min-height: 400px;
 }
 
 .hero .hero-slider {
     width: 100%;
     height: 85vh;
     min-height: 400px;
+    margin-bottom: 0;
 }
 
 .hero .hero-slider img {
@@ -321,6 +319,7 @@ body[style*="top"] {
     object-fit: cover;
     filter: brightness(60%);
     transition: transform 8s ease;
+    vertical-align: bottom;
 }
 
 .hero .hero-slider div.slick-active img {
