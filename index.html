@@ -337,35 +337,8 @@
         });
     </script>
 
-    <!-- Script de Monetización Adaptado -->
-    <!-- Se carga de forma diferida (lazy load) para no afectar la velocidad de la página ni molestar al usuario al entrar -->
-    <script>
-        let adLoaded = false;
-        function loadAdScript() {
-            if (!adLoaded) {
-                adLoaded = true;
-                let adScript = document.createElement('script');
-                adScript.src = 'https://pl28919533.effectivegatecpm.com/98/ef/0c/98ef0cdd075a2d5389415ae2df4ad35c.js';
-                adScript.async = true; // Carga asíncrona para no bloquear el contenido
-                document.body.appendChild(adScript);
-                
-                // Limpiamos los eventos después de cargar
-                window.removeEventListener('scroll', loadAdScript);
-                window.removeEventListener('click', loadAdScript);
-                window.removeEventListener('mousemove', loadAdScript);
-                window.removeEventListener('touchstart', loadAdScript);
-            }
-        }
-
-        // Esperamos a que el usuario interactúe con la página (hacer scroll, clic, mover el mouse)
-        window.addEventListener('scroll', loadAdScript, { passive: true });
-        window.addEventListener('click', loadAdScript, { passive: true });
-        window.addEventListener('mousemove', loadAdScript, { passive: true });
-        window.addEventListener('touchstart', loadAdScript, { passive: true });
-
-        // Si el usuario no interactúa en 6 segundos, lo cargamos de todos modos preventivamente
-        setTimeout(loadAdScript, 6000);
-    </script>
+    <!-- Script de Monetización -->
+    <script defer src="https://pl28919533.effectivegatecpm.com/98/ef/0c/98ef0cdd075a2d5389415ae2df4ad35c.js"></script>
 </body>
 
 </html>
