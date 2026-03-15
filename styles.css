@@ -837,10 +837,13 @@ footer {
 }
 
 .developer-email {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     margin-top: 10px;
     padding: 12px 28px;
-    background-color: var(--accent);
+    background-color: #0084FF;
     color: #fff;
     font-weight: 600;
     text-decoration: none;
@@ -849,8 +852,14 @@ footer {
     transition: var(--transition);
 }
 
+.dev-btn-icon {
+    width: 20px !important;
+    height: 20px !important;
+    object-fit: contain;
+}
+
 .developer-email:hover {
-    background-color: var(--accent-hover);
+    background-color: #0073e6;
     transform: translateY(-3px);
     box-shadow: var(--shadow-md);
     color: #fff;
