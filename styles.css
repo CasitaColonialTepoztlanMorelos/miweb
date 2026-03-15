@@ -915,6 +915,7 @@ footer {
     }
 
     /* Hero */
+    .hero,
     .hero .hero-slider,
     .hero .hero-slider img {
         height: 65vh;
@@ -984,6 +985,7 @@ footer {
     }
 
     /* Hero */
+    .hero,
     .hero .hero-slider,
     .hero .hero-slider img {
         height: 55vh;
@@ -1091,6 +1093,7 @@ footer {
         font-size: 0.95rem;
     }
 
+    .hero,
     .hero .hero-slider,
     .hero .hero-slider img {
         height: 50vh;
@@ -1110,6 +1113,7 @@ footer {
 /* Landscape orientation on mobile */
 @media (max-height: 500px) and (orientation: landscape) {
 
+    .hero,
     .hero .hero-slider,
     .hero .hero-slider img {
         height: 90vh;
