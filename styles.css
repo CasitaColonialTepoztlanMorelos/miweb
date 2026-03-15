@@ -62,13 +62,68 @@ img {
 
 /* ============ HEADER ============ */
 header {
-    background: var(--primary);
+    background: linear-gradient(-45deg, #001f3f, #004488, #4488cc, #b3e5fc, #001f3f);
+    background-size: 300% 300%;
+    animation: gradientFlow 8s ease infinite;
     color: #fff;
     padding: 16px 0;
-    position: static;
+    position: relative;
     z-index: 100;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
-    transition: padding 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+@keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes neonPulse {
+    0%, 100% {
+        text-shadow: 
+            0 0 4px #fff,
+            0 0 10px #8ecae6,
+            0 0 20px #8ecae6;
+    }
+    50% {
+        text-shadow: 
+            0 0 2px #fff,
+            0 0 7px #8ecae6,
+            0 0 15px #8ecae6;
+    }
+}
+
+.header-bg-effects {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.bubble {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: floatBubbles 20s infinite linear;
+}
+
+.bubble:nth-child(1) { width: 60px; height: 60px; top: 10%; left: 10%; animation-duration: 25s; }
+.bubble:nth-child(2) { width: 100px; height: 100px; top: 40%; left: 80%; animation-duration: 30s; }
+.bubble:nth-child(3) { width: 40px; height: 40px; top: 70%; left: 30%; animation-duration: 18s; }
+.bubble:nth-child(4) { width: 80px; height: 80px; top: 20%; left: 60%; animation-duration: 35s; }
+.bubble:nth-child(5) { width: 50px; height: 50px; top: 80%; left: 90%; animation-duration: 22s; }
+
+@keyframes floatBubbles {
+    0% { transform: translateY(0) translateX(0) scale(1); opacity: 0; }
+    20% { opacity: 0.5; }
+    50% { transform: translateY(-40px) translateX(20px) scale(1.1); }
+    80% { opacity: 0.5; }
+    100% { transform: translateY(-80px) translateX(-20px) scale(1); opacity: 0; }
 }
 
 .header-flex {
@@ -86,6 +141,12 @@ header .container {
 header h1 {
     text-align: center;
     margin-bottom: 10px;
+    font-size: clamp(1.2rem, 3vw, 2.2rem);
+    color: #fff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+    animation: neonPulse 2s infinite alternate;
 }
 
 header nav {
@@ -115,20 +176,24 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(255, 255, 255, 0.95);
     text-decoration: none;
     font-weight: 500;
     font-size: 0.85rem;
     letter-spacing: 0.5px;
-    padding: 8px 16px;
+    padding: 10px 18px;
     border-radius: var(--radius-pill);
     transition: var(--transition);
     white-space: nowrap;
+    position: relative;
+    z-index: 5;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 header nav ul li a:hover {
-    background: rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.15);
     color: #fff;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
 }
 
 /* ============ CUSTOM TRANSLATOR IN NAV ============ */
