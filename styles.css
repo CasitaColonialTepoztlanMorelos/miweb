@@ -131,6 +131,143 @@ header nav ul li a:hover {
     color: #fff;
 }
 
+/* ============ CUSTOM TRANSLATOR IN NAV ============ */
+.nav-wrapper {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.custom-lang-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.lang-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: var(--radius-pill);
+    padding: 6px 16px;
+    color: white;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition);
+}
+
+.lang-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.lang-flag {
+    font-size: 1.1rem;
+    line-height: 1;
+}
+
+.lang-arrow {
+    font-size: 0.7rem;
+    margin-left: 2px;
+}
+
+.lang-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 8px;
+    background: var(--bg-section);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    list-style: none;
+    padding: 8px 0;
+    min-width: 140px;
+    z-index: 1000;
+    border: 1px solid var(--border-light);
+}
+
+.lang-menu.show {
+    display: block;
+    animation: fadeIn 0.2s ease;
+}
+
+.lang-menu li {
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-dark);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.lang-menu li:hover {
+    background: var(--bg-section-alt);
+    color: var(--primary);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Ocultar ABSOLUTAMENTE el molesto banner superior de Google Translate */
+body {
+    top: 0 !important;
+    position: static !important;
+}
+
+html {
+    height: auto !important;
+}
+
+body.skiptranslate {
+    top: 0 !important;
+}
+
+iframe.goog-te-banner-frame {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+.goog-te-banner-frame.skiptranslate,
+.goog-te-banner-frame {
+    display: none !important;
+}
+
+.skiptranslate > iframe {
+    display: none !important;
+}
+
+/* Ocultar demás tooltips/iconos/links */
+.goog-logo-link,
+.goog-te-gadget span {
+    display: none !important;
+}
+
+.goog-te-gadget {
+    color: transparent !important;
+    font-size: 0px !important;
+}
+
+#goog-gt-tt, .goog-te-balloon-frame {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* Para navegadores que inyectan el padding/margin en HTML/body al traducir */
+html[style*="height"],
+body[style*="top"] {
+    top: 0 !important;
+    position: static !important;
+}
+/* =================================================== */
+
 /* Hamburger button */
 .menu-toggle {
     display: none;
@@ -214,19 +351,29 @@ header nav ul li a:hover {
 }
 
 .hero .hero-content h2 {
-    font-size: clamp(1.5rem, 5vw, 3.2rem);
-    font-weight: 700;
-    line-height: 1.15;
-    text-shadow: 0 3px 20px rgba(0,0,0,0.5);
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(1.6rem, 5vw, 3.5rem);
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.8), 0 2px 5px rgba(0,0,0,0.5);
     margin-bottom: 12px;
     animation: fadeInUp 1s ease both;
     color: #fff;
 }
 
+/* Specific styling for the poetic phrases to make them look distinct and elegant */
+.hero .hero-content h2#hero-animated-text {
+    text-transform: none; /* Allow lowercase for poetic phrases */
+    font-weight: 500;
+}
+
 .hero-sub {
-    font-size: clamp(0.85rem, 2vw, 1.15rem);
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(0.9rem, 2vw, 1.25rem);
     font-weight: 300;
-    opacity: 0.9;
+    opacity: 0.95;
     letter-spacing: 1px;
     animation: fadeInUp 1s 0.3s ease both;
 }
@@ -492,9 +639,9 @@ section h3::after {
     background: var(--bg-section-alt);
 }
 
-.social-media .social-media {
+.social-media-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 16px;
     max-width: 900px;
     margin: 0 auto;
@@ -502,7 +649,7 @@ section h3::after {
 
 .social-item {
     flex: 1;
-    min-width: 200px;
+    min-width: 180px;
 }
 
 .social-item a {
@@ -554,6 +701,116 @@ footer {
     text-align: center;
     padding: 22px 0;
     font-size: 0.85rem;
+}
+
+/* ============ REGLAS ACORDEON ============ */
+.rules-accordion {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--bg-body);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    border: 1px solid var(--border-light);
+}
+
+.rules-accordion summary {
+    font-weight: 600;
+    color: var(--primary);
+    padding: 18px 24px;
+    cursor: pointer;
+    list-style: none; /* Hide default arrow */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg-section-alt);
+    transition: var(--transition);
+}
+
+.rules-accordion summary::-webkit-details-marker {
+    display: none; /* WebKit */
+}
+
+/* Custom arrow for accordion */
+.rules-accordion summary::after {
+    content: '▼';
+    font-size: 0.8rem;
+    color: var(--accent);
+    transition: transform 0.3s ease;
+}
+
+.rules-accordion[open] summary::after {
+    transform: rotate(180deg);
+}
+
+.rules-accordion[open] summary {
+    border-bottom: 1px solid var(--border-light);
+}
+
+.accordion-content {
+    padding: 24px;
+    font-size: 0.95rem;
+    color: var(--text-medium);
+    line-height: 1.8;
+}
+
+.accordion-content p {
+    margin: 0;
+}
+
+/* ============ HERO TEXT ANIMATION ============ */
+#hero-animated-text {
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#hero-animated-text.fade-out {
+    opacity: 0;
+    transform: translateY(-15px);
+}
+/* ============================================= */
+
+/* ============ DEVELOPER PROMO ============ */
+.developer-promo {
+    background: linear-gradient(135deg, var(--bg-section) 0%, var(--bg-section-alt) 100%);
+    padding: 60px 0;
+    text-align: center;
+    border-top: 1px solid var(--border-light);
+}
+
+.developer-promo h3 {
+    margin-bottom: 15px;
+    color: var(--primary);
+}
+
+.developer-promo p {
+    font-size: 1.05rem;
+    color: var(--text-medium);
+    margin-bottom: 15px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.developer-email {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 28px;
+    background-color: var(--accent);
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: var(--radius-pill);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.developer-email:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    color: #fff;
 }
 
 /* ============================================================
@@ -630,7 +887,7 @@ footer {
     }
 
     /* Social */
-    .social-media .social-media {
+    .social-media-container {
         grid-template-columns: repeat(2, 1fr);
         gap: 12px;
     }
@@ -703,7 +960,7 @@ footer {
     .rules-contact p { font-size: 0.85rem; }
 
     /* Social */
-    .social-media .social-media {
+    .social-media-container {
         grid-template-columns: 1fr 1fr;
         gap: 10px;
     }

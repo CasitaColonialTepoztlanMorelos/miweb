@@ -27,13 +27,12 @@
     <link rel="apple-touch-icon" href="iconos/apple-touch-icon.png">
 
 
-    <meta name="description" content="Hospédate en Casita Colonial, un acogedor hospedaje en el corazón de Tepoztlán, Morelos. Disfruta comodidad, tranquilidad y disfruta en Tepoztlán Morelos en compañía de familiares, amigos con un máximo de 10 personas, 2 recámaras, 4 camas matrimoniales, un futón matrimonial, 2 baños completos. Cocina equipada,
-    Segundo nivel: Terraza con asador, comedor al aire libre, hamaca, alberca climatizada con calefacción solar y vista al cerro del Tepozteco. Wi-Fi, Netflix, sonido para música, café, agua, azúcar, blancos, toallas.
-    Excelente anfitrión. Llegarás a tu casita de Tepoztlán.">
+    <meta name="description"
+        content="Ven a Casita Colonial en Tepoztlán, Morelos. Hospedaje completo para hasta 10 personas con alberca climatizada, vista al cerro del Tepozteco, terraza con asador, Wi-Fi, Netflix y ubicación céntrica. Ideal para fines de semana en familia y amigos.">
 
     <meta name="author" content="Casita Colonial Tepoztlán">
 
-    <meta name="keywords" content="hospedaje, alojamiento, renta vacacional, casa en renta, cabañas en renta, hotel, posada, casa de descanso, hospedaje económico, alojamiento familiar, hospedaje con alberca, hospedaje con vista panorámica, hospedaje para parejas, alojamiento rural, habitaciones en renta, hospedaje de fin de semana, hotel boutique, alojamiento turístico, hospedaje céntrico, cabañas románticas, renta de habitaciones,
+    <meta name="keywords" content="hospedaje,morelos, alojamiento, renta vacacional, casa en renta, cabañas en renta, hotel, posada, casa de descanso, hospedaje económico, alojamiento familiar, hospedaje con alberca, hospedaje con vista panorámica, hospedaje para parejas, alojamiento rural, habitaciones en renta, hospedaje de fin de semana, hotel boutique, alojamiento turístico, hospedaje céntrico, cabañas románticas, renta de habitaciones,
     hospedaje en Tepoztlán, alojamiento en Tepoztlán Morelos, cabañas en Tepoztlán, hospedaje cerca del Tepozteco, casa en renta en Tepoztlán, hotel en el centro de Tepoztlán, posada en Tepoztlán, hospedaje en el pueblo mágico, alojamiento cerca del centro, hospedaje con estacionamiento en Tepoztlán,
     hospedaje tranquilo, alojamiento romántico, lugar para descansar, alojamiento con jardín, hospedaje con vista a la montaña, cabañas para desconectarse, experiencia natural, escapada de fin de semana, hospedaje pet friendly, alojamiento con chimenea, hospedaje con desayuno incluido, alojamiento sustentable, ambiente familiar, lugar para relajarse, retiro espiritual,
     hospedaje cerca de mí, mejores lugares para hospedarse, alojamiento económico, dónde dormir en Tepoztlán, cabañas con buena reseña, reserva de hospedaje en línea, alojamiento con WiFi, hospedaje con buenas opiniones, hospedaje con cocina, casas en renta para vacaciones,
@@ -73,24 +72,87 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
-
-    <!-- Script de Monetización (Movido al head) -->
-    <script src="https://pl28919533.effectivegatecpm.com/98/ef/0c/98ef0cdd075a2d5389415ae2df4ad35c.js"></script>
 </head>
 
 <body>
     <header>
         <div class="container" style="text-align:center;">
             <h1 style="text-align:center;margin-bottom:10px;">HOSPEDAJE CASITA COLONIAL TEPOZTLAN MORELOS</h1>
-            <nav style="width:100%;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;">
-                <ul
-                    style="display:flex;flex-wrap:nowrap;justify-content:center;list-style:none;gap:6px;padding:4px 10px;margin:0;">
-                    <li style="flex-shrink:0;"><a href="#descripcion" style="white-space:nowrap;">DESCRIPCIÓN</a></li>
-                    <li style="flex-shrink:0;"><a href="#galeria" style="white-space:nowrap;">GALERÍA</a></li>
-                    <li style="flex-shrink:0;"><a href="#normas" style="white-space:nowrap;">NORMAS</a></li>
-                    <li style="flex-shrink:0;"><a href="#redes-sociales" style="white-space:nowrap;">CONTACTO</a></li>
-                </ul>
-            </nav>
+
+            <div class="nav-wrapper"
+                style="display:flex; align-items:center; justify-content:center; gap: 15px; flex-wrap: wrap;">
+                <nav style="overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch; max-width: 100%;">
+                    <ul
+                        style="display:flex;flex-wrap:nowrap;justify-content:center;list-style:none;gap:6px;padding:4px 10px;margin:0;">
+                        <li style="flex-shrink:0;"><a href="#descripcion" style="white-space:nowrap;">DESCRIPCIÓN</a>
+                        </li>
+                        <li style="flex-shrink:0;"><a href="#galeria" style="white-space:nowrap;">GALERÍA</a></li>
+                        <li style="flex-shrink:0;"><a href="#normas" style="white-space:nowrap;">NORMAS</a></li>
+                        <li style="flex-shrink:0;"><a href="#redes-sociales" style="white-space:nowrap;">CONTACTO</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Menú de Idiomas Personalizado con Banderas -->
+                <div class="custom-lang-dropdown" id="langDropdown">
+                    <button class="lang-btn" id="langBtn" aria-label="Seleccionar idioma">
+                        <span class="lang-flag" id="currentFlag">🇲🇽</span>
+                        <span class="lang-text" id="currentLang">Español</span>
+                        <span class="lang-arrow">▼</span>
+                    </button>
+                    <ul class="lang-menu" id="langMenu">
+                        <li onclick="changeLanguage('es', '🇲🇽', 'Español')"><span class="lang-flag">🇲🇽</span>
+                            Español</li>
+                        <li onclick="changeLanguage('en', '🇺🇸', 'English')"><span class="lang-flag">🇺🇸</span>
+                            English</li>
+                        <li onclick="changeLanguage('fr', '🇫🇷', 'Français')"><span class="lang-flag">🇫🇷</span>
+                            Français</li>
+                        <li onclick="changeLanguage('de', '🇩🇪', 'Deutsch')"><span class="lang-flag">🇩🇪</span>
+                            Deutsch</li>
+                        <li onclick="changeLanguage('pt', '🇧🇷', 'Português')"><span class="lang-flag">🇧🇷</span>
+                            Português</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Widget Oculto de Traducción -->
+            <div id="google_translate_element" style="display:none;"></div>
+            <script type="text/javascript">
+                function googleTranslateElementInit() {
+                    new google.translate.TranslateElement({
+                        pageLanguage: 'es',
+                        includedLanguages: 'es,en,fr,de,pt',
+                        autoDisplay: false
+                    }, 'google_translate_element');
+                }
+
+                function changeLanguage(langCode, flag, name) {
+                    document.getElementById('currentFlag').innerText = flag;
+                    document.getElementById('currentLang').innerText = name;
+                    document.getElementById('langMenu').classList.remove('show');
+
+                    var selectField = document.querySelector(".goog-te-combo");
+                    if (selectField) {
+                        selectField.value = langCode;
+                        selectField.dispatchEvent(new Event('change'));
+                    }
+                }
+
+                // Toggle dropdown menu
+                document.getElementById('langBtn').addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    document.getElementById('langMenu').classList.toggle('show');
+                });
+
+                // Close dropdown when clicking outside
+                window.addEventListener('click', function (e) {
+                    if (!document.getElementById('langDropdown').contains(e.target)) {
+                        document.getElementById('langMenu').classList.remove('show');
+                    }
+                });
+            </script>
+            <script type="text/javascript"
+                src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
         </div>
     </header>
 
@@ -103,7 +165,7 @@
             <div><img src="imagenes_hospedaje\x3.webp" alt="Hotel Image 4"></div>
         </div>
         <div class="hero-content">
-            <h2>HOSPEDAJE CASITA COLONIAL TEPOZTLAN MORELOS</h2>
+            <h2 id="hero-animated-text">HOSPEDAJE CASITA COLONIAL TEPOZTLAN MORELOS</h2>
         </div>
     </section>
 
@@ -182,64 +244,107 @@
     <section id="normas" class="rules">
         <div class="container">
             <h3>NORMAS Y RECOMENDACIONES DE "CASITA COLONIAL TEPOZTLAN MORELOS"</h3>
-            <p>
-                * Reducir volumen de la música después de las 20 hrs por acuerdos y normas de hospedajes y hoteles en
-                Tepoztlán y por respeto a los vecinos.<br><br>
-                * Tapar alberca con cubierta azul térmica en la noche al finalizar su uso para mantener el calor del
-                agua.<br><br>
-                * No mover o tratar de manipular el mecanismo de la alberca, llaves, calentadores, solares, mangueras,
-                estrictamente prohibido. ¡Se penalizará cualquier desperfecto ya que todo es automático!<br><br>
-                * Prohibido estrictamente el consumo de drogas o sustancias prohibidas en el departamento "Casita
-                Colonial" o se te pedirá el desalojo sin devolución de efectivo de renta.<br><br>
-                * El departamento "Casita Colonial" no se hace responsable de cualquier incidente, o en caso de robo,
-                pérdida, o extravío de pertenencias después de la entrega de llaves del departamento.<br><br>
-                * A todas las familias que traen niños menores de edad a "Casita Colonial," los padres o familiares se
-                harán responsables de ellos para uso de la alberca y estancia en el departamento.<br><br>
-                * Estrictamente prohibido meter mascotas a la alberca, subirlos a sillones y camas, y limpiar sus
-                heces.<br><br>
-                * REGULARMENTE la salida y entrega de llaves es a las 13 hrs excepto cuando se les autorice horas
-                adicionales en caso de no tener reservación el mismo día de salida.<br><br>
-                CUALQUIER DUDA O ACLARACIÓN RESPECTO A LA CASA O DEPARTAMENTO COMUNICARSE AL TELÉFONO 7771254813 Ο
-                7772108652 VÍA WHATSAPP.<br><br>
-                DISFRUTA TU ESTANCIA EN FAMILIA O GRUPOS DE AMIGOS SANAMENTE EN "CASITA COLONIAL." RECUERDA, EL
-                DEPARTAMENTO ES DE AMBIENTE FAMILIAR (NO ES BAR NI ANTRO).
-            </p>
+            <details class="rules-accordion">
+                <summary>Haz clic aquí para ver las normas del hospedaje</summary>
+                <div class="accordion-content">
+                    <p>
+                        * Reducir volumen de la música después de las 20 hrs por acuerdos y normas de hospedajes y
+                        hoteles en
+                        Tepoztlán y por respeto a los vecinos.<br><br>
+                        * Tapar alberca con cubierta azul térmica en la noche al finalizar su uso para mantener el calor
+                        del
+                        agua.<br><br>
+                        * No mover o tratar de manipular el mecanismo de la alberca, llaves, calentadores, solares,
+                        mangueras,
+                        estrictamente prohibido. ¡Se penalizará cualquier desperfecto ya que todo es automático!<br><br>
+                        * Prohibido estrictamente el consumo de drogas o sustancias prohibidas en el departamento
+                        "Casita
+                        Colonial" o se te pedirá el desalojo sin devolución de efectivo de renta.<br><br>
+                        * El departamento "Casita Colonial" no se hace responsable de cualquier incidente, o en caso de
+                        robo,
+                        pérdida, o extravío de pertenencias después de la entrega de llaves del departamento.<br><br>
+                        * A todas las familias que traen niños menores de edad a "Casita Colonial," los padres o
+                        familiares se
+                        harán responsables de ellos para uso de la alberca y estancia en el departamento.<br><br>
+                        * Estrictamente prohibido meter mascotas a la alberca, subirlos a sillones y camas, y limpiar
+                        sus
+                        heces.<br><br>
+                        * REGULARMENTE la salida y entrega de llaves es a las 13 hrs excepto cuando se les autorice
+                        horas
+                        adicionales en caso de no tener reservación el mismo día de salida.<br><br>
+                        CUALQUIER DUDA O ACLARACIÓN RESPECTO A LA CASA O DEPARTAMENTO COMUNICARSE AL TELÉFONO 7771254813
+                        Ο
+                        7772108652 VÍA WHATSAPP.<br><br>
+                        DISFRUTA TU ESTANCIA EN FAMILIA O GRUPOS DE AMIGOS SANAMENTE EN "CASITA COLONIAL." RECUERDA, EL
+                        DEPARTAMENTO ES DE AMBIENTE FAMILIAR (NO ES BAR NI ANTRO).
+                    </p>
+                </div>
+            </details>
         </div>
     </section>
 
     <section id="redes-sociales" class="social-media">
         <div class="container">
             <h3>REDES SOCIALES</h3>
-            <div class="social-media">
+            <div class="social-media-container">
                 <div class="social-item">
                     <a href="https://www.facebook.com/profile.php?id=100065453651389&mibextid=ZbWKwL" target="_blank"
                         aria-label="Visita nuestra página de Facebook">
-                        <img src="iconos/facebook.png" alt="Facebook" width="48" height="48">
+                        <img src="iconos/facebook.png" alt="Facebook" width="36" height="36">
                         <p>@CasitaColonialTepoztlanMorelos</p>
                     </a>
                 </div>
                 <div class="social-item">
                     <a href="https://www.instagram.com/tepoztlan_casita_colonial" target="_blank"
                         aria-label="Visita nuestro perfil de Instagram">
-                        <img src="iconos/instagram.png" alt="Instagram" width="48" height="48">
+                        <img src="iconos/instagram.png" alt="Instagram" width="36" height="36">
                         <p>@tepoztlan_casita_colonial</p>
                     </a>
                 </div>
                 <div class="social-item">
                     <a href="https://api.whatsapp.com/send?phone=5217771254813&text=%C2%A1Hola%21+Podr%C3%ADas+darme+m%C3%A1s+informaci%C3%B3n+del+hospedaje..."
                         target="_blank" aria-label="Contáctanos por WhatsApp">
-                        <img src="iconos/whatsapp.png" alt="WhatsApp" width="48" height="48">
+                        <img src="iconos/whatsapp.png" alt="WhatsApp" width="36" height="36">
                         <p>@WhatsApp Casita Colonial</p>
                     </a>
                 </div>
                 <div class="social-item">
                     <a href="https://m.me/100721622118869?source=qr" target="_blank"
                         aria-label="Contáctanos por Messenger">
-                        <img src="iconos/mensajero.png" alt="Messenger" width="48" height="48">
+                        <img src="iconos/mensajero.png" alt="Messenger" width="36" height="36">
                         <p>@Messenger Casita Colonial</p>
                     </a>
                 </div>
+                <div class="social-item">
+                    <a href="https://www.airbnb.mx/rooms/1550243904014530299?check_in=2026-03-16&check_out=2026-03-21&guests=1&adults=1&s=67&unique_share_id=6364ea72-b1aa-4b3f-a1c1-faacd22bbdbf"
+                        target="_blank" aria-label="Reserva en Airbnb - Opción 1">
+                        <img src="iconos/airbnb.png" alt="Airbnb 1" width="36" height="36"
+                            onerror="this.src='https://cdn-icons-png.flaticon.com/512/2111/2111320.png';">
+                        <p>Reservar en airbnb publicacion 1</p>
+                    </a>
+                </div>
+                <div class="social-item">
+                    <a href="https://www.airbnb.mx/rooms/1250199192153287600?check_in=2026-03-15&check_out=2026-03-20&guests=1&adults=1&s=67&unique_share_id=9116985d-7afa-4d86-9b75-0739416ac988"
+                        target="_blank" aria-label="Reserva en Airbnb - Opción 2">
+                        <img src="iconos/airbnb.png" alt="Airbnb 2" width="36" height="36"
+                            onerror="this.src='https://cdn-icons-png.flaticon.com/512/2111/2111320.png';">
+                        <p>Reservar en airbnb publicacion 2</p>
+                    </a>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <section class="developer-promo">
+        <div class="container">
+            <h3>¿Te gustó esta página web?</h3>
+            <p><strong>Promoción de Negocios Locales en Tepoztlán:</strong> ¿Tienes un negocio (restaurante, tour,
+                comercio) y quieres anunciarlo a los turistas en esta página web para que te visiten?</p>
+            <p><strong>Desarrollo Web:</strong> ¿Necesitas tu propia página web profesional para tu hospedaje o
+                proyecto?</p>
+            <p>¡Yo te ayudo con la creación o la publicidad!</p>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=acr10programador@gmail.com&su=Informaci%C3%B3n%20para%20crear%20p%C3%A1gina%20web%20o%20publicidad%20local"
+                target="_blank" class="developer-email">Enviar un correo por Gmail</a>
         </div>
     </section>
 
@@ -274,7 +379,7 @@
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 autoplay: true,
-                autoplaySpeed: 25000,
+                autoplaySpeed: 5000,
                 dots: true,
                 fade: true,
                 cssEase: 'linear',
@@ -337,6 +442,32 @@
                     $(this).css('display', 'none');
                 }
             });
+
+            // Hero Text Animation Synced with Slider
+            const heroPhrases = [
+                "HOSPEDAJE CASITA COLONIAL TEPOZTLAN MORELOS",
+                "Donde la montaña te abraza y el alma descansa — Bienvenido a Tepoztlán.",
+                "Despierta entre cerros sagrados. Aquí el tiempo se detiene para que tú puedas respirar."
+            ];
+            const heroTextElement = document.getElementById("hero-animated-text");
+
+            if (heroTextElement) {
+                // Escuchar el evento de Slick Slider justo cuando empieza a cambiar la foto
+                $('.hero-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+                    
+                    // Iniciar el efecto de desvanecimiento (fade-out)
+                    heroTextElement.classList.add("fade-out");
+                    
+                    setTimeout(() => {
+                        // Cambiar la frase usando el índice de la foto siguiente
+                        const phraseIndex = nextSlide % heroPhrases.length;
+                        heroTextElement.innerText = heroPhrases[phraseIndex];
+                        
+                        // Quitar el fade-out para que aparezca (fade-in)
+                        heroTextElement.classList.remove("fade-out");
+                    }, 800); // Darle unos milisegundos para que termine la transición CSS de invisible
+                });
+            }
         });
     </script>
 
