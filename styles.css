@@ -62,15 +62,12 @@ img {
 
 /* ============ HEADER ============ */
 header {
-    background: linear-gradient(-45deg, #001f3f, #004488, #4488cc, #b3e5fc, #001f3f);
-    background-size: 300% 300%;
-    animation: gradientFlow 8s ease infinite;
+    background: #001f3f;
     color: #fff;
     padding: 16px 0;
     position: relative;
     z-index: 100;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
 }
 
 @keyframes gradientFlow {
@@ -103,6 +100,9 @@ header {
     pointer-events: none;
     z-index: 1;
     overflow: hidden;
+    background: linear-gradient(-45deg, #001f3f, #004488, #4488cc, #b3e5fc, #001f3f);
+    background-size: 300% 300%;
+    animation: gradientFlow 8s ease infinite;
 }
 
 .bubble {
@@ -136,6 +136,8 @@ header {
 
 header .container {
     text-align: center;
+    position: relative;
+    z-index: 2;
 }
 
 header h1 {
@@ -155,6 +157,7 @@ header nav {
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
+    max-width: 100%;
 }
 
 header nav::-webkit-scrollbar {
@@ -168,7 +171,8 @@ header nav ul {
     justify-content: center;
     gap: 6px;
     flex-wrap: nowrap;
-    padding: 4px 0;
+    padding: 4px 10px;
+    margin: 0;
 }
 
 header nav ul li {
@@ -201,6 +205,11 @@ header nav ul li a:hover {
     position: relative;
     max-width: 1000px;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 .custom-lang-dropdown {
