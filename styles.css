@@ -76,20 +76,6 @@ header {
     100% { background-position: 0% 50%; }
 }
 
-@keyframes neonPulse {
-    0%, 100% {
-        text-shadow: 
-            0 0 4px #fff,
-            0 0 10px #8ecae6,
-            0 0 20px #8ecae6;
-    }
-    50% {
-        text-shadow: 
-            0 0 2px #fff,
-            0 0 7px #8ecae6,
-            0 0 15px #8ecae6;
-    }
-}
 
 .header-bg-effects {
     position: absolute;
@@ -100,9 +86,9 @@ header {
     pointer-events: none;
     z-index: 1;
     overflow: hidden;
-    background: linear-gradient(-45deg, #001f3f, #004488, #4488cc, #b3e5fc, #001f3f);
-    background-size: 300% 300%;
-    animation: gradientFlow 8s ease infinite;
+    background: linear-gradient(-45deg, #001f3f, #003366, #004488, #005599, #003366, #001f3f);
+    background-size: 400% 400%;
+    animation: gradientFlow 12s ease infinite;
 }
 
 .bubble {
@@ -148,7 +134,7 @@ header h1 {
     letter-spacing: 2px;
     text-transform: uppercase;
     font-weight: 700;
-    animation: neonPulse 2s infinite alternate;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 header nav {
@@ -808,7 +794,66 @@ section h3::after {
     word-break: break-word;
 }
 
+/* ============ CONTACT GROUPS ============ */
+.contact-group {
+    background: var(--bg-section);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-light);
+    padding: 28px 24px;
+    margin-bottom: 24px;
+    box-shadow: var(--shadow-sm);
+}
+
+.contact-group-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--border-light);
+}
+
+.contact-group-header h4 {
+    margin: 0 0 4px 0;
+    font-size: 1.05rem;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.group-subtitle {
+    margin: 0;
+    font-size: 0.82rem;
+    color: var(--text-light);
+    font-weight: 400;
+}
+
+.group-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.group-icon-emoji {
+    font-size: 2rem;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.airbnb-header {
+    border-bottom-color: #FF5A5F;
+}
+
+.airbnb-header h4 {
+    color: #d93025;
+}
+
+.direct-header {
+    border-bottom-color: var(--accent);
+}
+
 /* ============ FOOTER ============ */
+
 footer {
     background: var(--primary);
     color: rgba(255, 255, 255, 0.6);
