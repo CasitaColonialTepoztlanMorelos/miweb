@@ -1275,3 +1275,405 @@ footer {
         font-size: 3.5rem;
     }
 }
+
+/* ============================================================
+   SECCIÓN DE RESEÑAS FACEBOOK
+   ============================================================ */
+.reviews-section {
+    background: linear-gradient(135deg, #f0f4ff 0%, #fdf6f0 100%);
+    padding: 80px 0 70px;
+}
+
+/* -- Encabezado de la sección -- */
+.reviews-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+.reviews-title-group {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.fb-reviews-icon {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 8px rgba(24,119,242,0.3));
+}
+
+.reviews-section h3 {
+    font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 4px;
+    text-align: left;
+}
+
+.reviews-section h3::after { display: none; }
+
+.reviews-subtitle {
+    color: var(--text-medium);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* -- Calificación general -- */
+.overall-rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    border-radius: var(--radius-lg);
+    padding: 18px 28px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-light);
+    min-width: 140px;
+}
+
+.rating-number {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: var(--primary);
+    line-height: 1;
+}
+
+.stars-overall {
+    color: #f59e0b;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    margin: 4px 0;
+}
+
+.rating-label {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    text-align: center;
+}
+
+/* -- Carrusel wrapper -- */
+.reviews-carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+    padding: 0 0 24px;
+}
+
+/* -- Track deslizante -- */
+.reviews-track {
+    display: flex;
+    gap: 24px;
+    transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    will-change: transform;
+    align-items: stretch;
+}
+
+/* -- Tarjetas de reseña -- */
+.review-card {
+    background: #fff;
+    border-radius: var(--radius-lg);
+    padding: 28px 26px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-light);
+    transition: var(--transition);
+    flex: 0 0 calc((100% - 48px) / 3);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    cursor: default;
+}
+
+.review-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(24,119,242,0.25);
+}
+
+/* -- Cabecera de tarjeta -- */
+.review-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.reviewer-avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+    letter-spacing: 0.5px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+.reviewer-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.reviewer-name {
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+}
+
+.review-date {
+    font-size: 0.78rem;
+    color: var(--text-light);
+}
+
+.fb-mini-icon {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    opacity: 0.85;
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+/* -- Estrellas de la tarjeta -- */
+.review-stars {
+    color: #f59e0b;
+    font-size: 1.05rem;
+    letter-spacing: 2px;
+}
+
+/* -- Texto de la reseña -- */
+.review-text {
+    color: var(--text-medium);
+    font-size: 0.92rem;
+    line-height: 1.7;
+    flex: 1;
+    font-style: italic;
+}
+
+/* -- Botones prev/next -- */
+.reviews-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-60%);
+    background: #fff;
+    border: 1px solid var(--border-light);
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    color: var(--primary);
+    cursor: pointer;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    z-index: 10;
+    line-height: 1;
+    padding: 0;
+}
+
+.reviews-btn:hover {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+
+.reviews-btn-prev { left: -12px; }
+.reviews-btn-next { right: -12px; }
+
+/* -- Dots -- */
+.reviews-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 28px;
+}
+
+.reviews-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #d1d5db;
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-block;
+}
+
+.reviews-dot.active {
+    background: #1877F2;
+    transform: scale(1.3);
+}
+
+/* -- CTA Facebook -- */
+.reviews-cta {
+    text-align: center;
+    margin-top: 36px;
+}
+
+.fb-reviews-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #1877F2;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 13px 28px;
+    border-radius: var(--radius-pill);
+    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(24,119,242,0.35);
+    letter-spacing: 0.3px;
+}
+
+.fb-reviews-link img {
+    border-radius: 3px;
+    filter: brightness(0) invert(1);
+}
+
+.fb-reviews-link:hover {
+    background: #1464d8;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(24,119,242,0.45);
+}
+
+/* -- Responsive -- */
+@media (max-width: 1023px) {
+    .review-card {
+        flex: 0 0 calc((100% - 24px) / 2);
+    }
+}
+
+@media (max-width: 639px) {
+    .review-card {
+        flex: 0 0 100%;
+    }
+    .reviews-btn-prev { left: 0; }
+    .reviews-btn-next { right: 0; }
+    .reviews-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .reviews-section h3 { font-size: 1.4rem; }
+}
+
+/* -- Logos duales en el encabezado -- */
+.platform-logos {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.platform-logo-svg {
+    width: 44px;
+    height: 44px;
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,0.15));
+}
+
+.platform-logo-img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 6px rgba(24,119,242,0.25));
+}
+
+/* -- Avatar wrap (foto + badge) -- */
+.reviewer-avatar-wrap {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+}
+
+.reviewer-photo {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    background: #f3f4f6;
+}
+
+.reviewer-initials {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+/* -- Badge de plataforma (mini logo esquina) -- */
+.platform-badge {
+    position: absolute;
+    bottom: -2px;
+    right: -4px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    padding: 2px;
+}
+
+.platform-badge svg,
+.platform-badge img {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+    border-radius: 0;
+    display: block;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    border: none;
+}
+
+/* -- Botón Google Maps -- */
+.google-reviews-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+    color: #3c4043;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 13px 28px;
+    border-radius: var(--radius-pill);
+    transition: var(--transition);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.08);
+    letter-spacing: 0.3px;
+    border: 1px solid rgba(0,0,0,0.08);
+}
+
+.google-reviews-link:hover {
+    background: #f8f9fa;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    transform: translateY(-3px);
+}
+
+/* -- CTA doble (Google + Facebook) -- */
+.reviews-cta-dual {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}

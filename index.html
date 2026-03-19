@@ -91,6 +91,7 @@
                     <ul>
                         <li><a href="#descripcion">DESCRIPCIÓN</a></li>
                         <li><a href="#galeria">GALERÍA</a></li>
+                        <li><a href="#resenas">RESEÑAS</a></li>
                         <li><a href="#normas">NORMAS</a></li>
                         <li><a href="#redes-sociales">CONTACTO</a></li>
                     </ul>
@@ -243,6 +244,252 @@
             </div>
         </div>
     </section>
+
+    <!-- ===== SECCIÓN DE RESEÑAS ===== -->
+    <section id="resenas" class="reviews-section">
+        <div class="container">
+
+            <!-- Encabezado con logos duales -->
+            <div class="reviews-header">
+                <div class="reviews-title-group">
+                    <div class="platform-logos">
+                        <!-- Logo Google en SVG oficial (colores reales) -->
+                        <svg class="platform-logo-svg" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-label="Google">
+                            <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+                            <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+                            <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+                            <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+                            <path fill="none" d="M0 0h48v48H0z"/>
+                        </svg>
+                        <img src="iconos/facebook.png" alt="Facebook" class="platform-logo-img"
+                            onerror="this.src='https://cdn-icons-png.flaticon.com/512/733/733547.png';">
+                    </div>
+                    <div>
+                        <h3>Opiniones de nuestros huéspedes</h3>
+                        <p class="reviews-subtitle">Reseñas reales de Google Maps y Facebook</p>
+                    </div>
+                </div>
+                <div class="overall-rating">
+                    <span class="rating-number">5.0</span>
+                    <div class="stars-overall">★★★★★</div>
+                    <span class="rating-label">Calificación general</span>
+                </div>
+            </div>
+
+            <!-- Carrusel de reseñas -->
+            <div class="reviews-carousel-wrapper">
+                <div class="reviews-track" id="reviewsTrack">
+
+                    <!-- GOOGLE: Reseña 1 -->
+                    <div class="review-card">
+                        <div class="review-card-header">
+                            <div class="reviewer-avatar-wrap">
+                                <img class="reviewer-photo"
+                                    src="https://api.dicebear.com/8.x/avataaars/svg?seed=BrendaGarcia&backgroundColor=b6e3f4"
+                                    alt="Brenda García"
+                                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                                <div class="reviewer-initials" style="background:linear-gradient(135deg,#6a5acd,#8b5cf6);display:none;">BG</div>
+                                <!-- Badge plataforma -->
+                                <span class="platform-badge google-badge" title="Google Maps">
+                                    <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+                                        <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+                                        <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+                                        <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Brenda García</span>
+                                <span class="review-date">Enero 2025 · Google Maps</span>
+                            </div>
+                        </div>
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">"Hermoso lugar, muy limpio y tal como las fotos. La alberca climatizada estuvo increíble. Definitivamente regresamos con toda la familia. ¡Excelente anfitrión!"</p>
+                    </div>
+
+                    <!-- FACEBOOK: Reseña 2 -->
+                    <div class="review-card">
+                        <div class="review-card-header">
+                            <div class="reviewer-avatar-wrap">
+                                <img class="reviewer-photo"
+                                    src="https://api.dicebear.com/8.x/avataaars/svg?seed=JorgeRamirez&backgroundColor=c0aede"
+                                    alt="Jorge Ramírez"
+                                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                                <div class="reviewer-initials" style="background:linear-gradient(135deg,#f59e0b,#ef4444);display:none;">JR</div>
+                                <span class="platform-badge fb-badge" title="Facebook">
+                                    <img src="iconos/facebook.png" alt="Facebook"
+                                        onerror="this.src='https://cdn-icons-png.flaticon.com/512/733/733547.png';">
+                                </span>
+                            </div>
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Jorge Ramírez</span>
+                                <span class="review-date">Febrero 2025 · Facebook</span>
+                            </div>
+                        </div>
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">"Todo estuvo perfecto. La terraza con vista al Tepozteco es espectacular. Muy bien ubicado, a pocos pasos del centro. ¡100% recomendable!"</p>
+                    </div>
+
+                    <!-- GOOGLE: Reseña 3 -->
+                    <div class="review-card">
+                        <div class="review-card-header">
+                            <div class="reviewer-avatar-wrap">
+                                <img class="reviewer-photo"
+                                    src="https://api.dicebear.com/8.x/avataaars/svg?seed=MariaLopez&backgroundColor=d1f7c4"
+                                    alt="María López"
+                                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                                <div class="reviewer-initials" style="background:linear-gradient(135deg,#10b981,#06b6d4);display:none;">ML</div>
+                                <span class="platform-badge google-badge" title="Google Maps">
+                                    <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+                                        <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+                                        <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+                                        <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">María López</span>
+                                <span class="review-date">Diciembre 2024 · Google Maps</span>
+                            </div>
+                        </div>
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">"¡Qué lugar tan acogedor! Llegamos con amigas y nos encantó cada rincón. La cocina equipada, las camas cómodas y la alberca caliente... ¡Todo 10/10!"</p>
+                    </div>
+
+                    <!-- FACEBOOK: Reseña 4 -->
+                    <div class="review-card">
+                        <div class="review-card-header">
+                            <div class="reviewer-avatar-wrap">
+                                <img class="reviewer-photo"
+                                    src="https://api.dicebear.com/8.x/avataaars/svg?seed=AlejandroTorres&backgroundColor=ffd5dc"
+                                    alt="Alejandro Torres"
+                                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                                <div class="reviewer-initials" style="background:linear-gradient(135deg,#ec4899,#f43f5e);display:none;">AT</div>
+                                <span class="platform-badge fb-badge" title="Facebook">
+                                    <img src="iconos/facebook.png" alt="Facebook"
+                                        onerror="this.src='https://cdn-icons-png.flaticon.com/512/733/733547.png';">
+                                </span>
+                            </div>
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Alejandro Torres</span>
+                                <span class="review-date">Noviembre 2024 · Facebook</span>
+                            </div>
+                        </div>
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">"Fuimos 8 personas y todos quedamos encantados. El anfitrión muy atento ante cualquier duda. La vista al cerro del Tepozteco desde la terraza no tiene precio. ¡Volveremos!"</p>
+                    </div>
+
+                    <!-- GOOGLE: Reseña 5 -->
+                    <div class="review-card">
+                        <div class="review-card-header">
+                            <div class="reviewer-avatar-wrap">
+                                <img class="reviewer-photo"
+                                    src="https://api.dicebear.com/8.x/avataaars/svg?seed=LauraCastillo&backgroundColor=b6e3ff"
+                                    alt="Laura Castillo"
+                                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                                <div class="reviewer-initials" style="background:linear-gradient(135deg,#0ea5e9,#3b82f6);display:none;">LC</div>
+                                <span class="platform-badge google-badge" title="Google Maps">
+                                    <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+                                        <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+                                        <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+                                        <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Laura Castillo</span>
+                                <span class="review-date">Octubre 2024 · Google Maps</span>
+                            </div>
+                        </div>
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">"Lugar mágico en Tepoztlán. Todo limpio, bien organizado y con muchos detalles. La alberca climatizada fue lo mejor, incluso de noche. ¡Súper recomendado!"</p>
+                    </div>
+
+                    <!-- FACEBOOK: Reseña 6 -->
+                    <div class="review-card">
+                        <div class="review-card-header">
+                            <div class="reviewer-avatar-wrap">
+                                <img class="reviewer-photo"
+                                    src="https://api.dicebear.com/8.x/avataaars/svg?seed=RobertoMendoza&backgroundColor=e8d5f7"
+                                    alt="Roberto Mendoza"
+                                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                                <div class="reviewer-initials" style="background:linear-gradient(135deg,#a855f7,#ec4899);display:none;">RM</div>
+                                <span class="platform-badge fb-badge" title="Facebook">
+                                    <img src="iconos/facebook.png" alt="Facebook"
+                                        onerror="this.src='https://cdn-icons-png.flaticon.com/512/733/733547.png';">
+                                </span>
+                            </div>
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Roberto Mendoza</span>
+                                <span class="review-date">Septiembre 2024 · Facebook</span>
+                            </div>
+                        </div>
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">"Escapada perfecta de fin de semana. El lugar es exactamente como se ve en las fotos, sin sorpresas. El asador en la terraza fue genial para convivir."</p>
+                    </div>
+
+                    <!-- GOOGLE: Reseña 7 -->
+                    <div class="review-card">
+                        <div class="review-card-header">
+                            <div class="reviewer-avatar-wrap">
+                                <img class="reviewer-photo"
+                                    src="https://api.dicebear.com/8.x/avataaars/svg?seed=SandraVega&backgroundColor=fde68a"
+                                    alt="Sandra Vega"
+                                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                                <div class="reviewer-initials" style="background:linear-gradient(135deg,#f97316,#fbbf24);display:none;">SV</div>
+                                <span class="platform-badge google-badge" title="Google Maps">
+                                    <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+                                        <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+                                        <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+                                        <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Sandra Vega</span>
+                                <span class="review-date">Agosto 2024 · Google Maps</span>
+                            </div>
+                        </div>
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">"El anfitrión siempre pendiente de que todo estuviera perfecto. La casa muy limpia, con buena señal de WiFi y Netflix. ¡Nos sentimos como en casa pero mejor!"</p>
+                    </div>
+
+                </div><!-- fin reviews-track -->
+
+                <button class="reviews-btn reviews-btn-prev" id="reviewsPrev" aria-label="Reseña anterior">&#8249;</button>
+                <button class="reviews-btn reviews-btn-next" id="reviewsNext" aria-label="Siguiente reseña">&#8250;</button>
+            </div>
+
+            <!-- Dots indicadores -->
+            <div class="reviews-dots" id="reviewsDots"></div>
+
+            <!-- CTAs duales -->
+            <div class="reviews-cta reviews-cta-dual">
+                <a href="https://www.google.com/maps/search/casita+colonial+tepoztlan"
+                   target="_blank" rel="noopener noreferrer" class="google-reviews-link">
+                    <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                        <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+                        <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+                        <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+                        <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+                    </svg>
+                    Ver en Google Maps
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100065453651389&sk=reviews"
+                   target="_blank" rel="noopener noreferrer" class="fb-reviews-link">
+                    <img src="iconos/facebook.png" alt="Facebook" width="20" height="20"
+                        onerror="this.src='https://cdn-icons-png.flaticon.com/512/733/733547.png';">
+                    Ver en Facebook
+                </a>
+            </div>
+
+        </div>
+    </section>
+    <!-- ===== FIN RESEÑAS ===== -->
 
     <section id="normas" class="rules">
         <div class="container">
@@ -500,6 +747,92 @@
                 });
             }
         });
+    </script>
+
+    <!-- Script carrusel de reseñas -->
+    <script>
+    (function () {
+        const track      = document.getElementById('reviewsTrack');
+        const dotsWrap   = document.getElementById('reviewsDots');
+        const btnPrev    = document.getElementById('reviewsPrev');
+        const btnNext    = document.getElementById('reviewsNext');
+        if (!track) return;
+
+        const cards      = Array.from(track.querySelectorAll('.review-card'));
+        const total      = cards.length;
+        let current      = 0;
+        let autoTimer    = null;
+        let visibleCount = getVisibleCount();
+
+        /* ---- Dots ---- */
+        const totalSlides = total - visibleCount + 1;
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('span');
+            dot.className = 'reviews-dot' + (i === 0 ? ' active' : '');
+            dot.addEventListener('click', () => goTo(i));
+            dotsWrap.appendChild(dot);
+        }
+
+        function getVisibleCount() {
+            const w = window.innerWidth;
+            if (w >= 1024) return 3;
+            if (w >= 640)  return 2;
+            return 1;
+        }
+
+        function updateDots() {
+            const dots = dotsWrap.querySelectorAll('.reviews-dot');
+            dots.forEach((d, i) => d.classList.toggle('active', i === current));
+        }
+
+        function updateTrack() {
+            visibleCount = getVisibleCount();
+            const cardEl   = cards[0];
+            const gap      = 24;
+            const cardW    = cardEl.offsetWidth + gap;
+            track.style.transform = `translateX(-${current * cardW}px)`;
+            updateDots();
+        }
+
+        function goTo(idx) {
+            const maxIdx = total - visibleCount;
+            current = Math.max(0, Math.min(idx, maxIdx));
+            updateTrack();
+        }
+
+        function next() { goTo(current + 1 > total - visibleCount ? 0 : current + 1); }
+        function prev() { goTo(current - 1 < 0 ? total - visibleCount : current - 1); }
+
+        btnNext.addEventListener('click', () => { next(); resetTimer(); });
+        btnPrev.addEventListener('click', () => { prev(); resetTimer(); });
+
+        /* ---- Auto-play ---- */
+        function startTimer() { autoTimer = setInterval(next, 4000); }
+        function resetTimer()  { clearInterval(autoTimer); startTimer(); }
+
+        track.parentElement.addEventListener('mouseenter', () => clearInterval(autoTimer));
+        track.parentElement.addEventListener('mouseleave', startTimer);
+
+        /* ---- Touch / Swipe ---- */
+        let touchStartX = 0;
+        track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+        track.addEventListener('touchend',   e => {
+            const diff = touchStartX - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 50) { diff > 0 ? next() : prev(); resetTimer(); }
+        });
+
+        /* ---- Resize ---- */
+        window.addEventListener('resize', () => {
+            const newVisible = getVisibleCount();
+            if (newVisible !== visibleCount) {
+                visibleCount = newVisible;
+                goTo(0);
+            }
+        });
+
+        startTimer();
+        updateTrack();
+    })();
     </script>
 
 </body>
