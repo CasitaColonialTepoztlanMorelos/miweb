@@ -735,21 +735,24 @@ section h3::after {
 }
 
 /* ============ REDES SOCIALES ============ */
+.social-media {
+    overflow-x: hidden;
+}
 .social {
     background: var(--bg-section-alt);
 }
 
 .social-media-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 12px;
     max-width: 900px;
     margin: 0 auto;
 }
 
 .social-item {
     flex: 1;
-    min-width: 180px;
+    min-width: 0;
 }
 
 .social-item a {
@@ -758,12 +761,14 @@ section h3::after {
     align-items: center;
     text-decoration: none;
     background: var(--bg-section);
-    padding: 25px 20px;
+    padding: 20px 12px;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-sm);
     transition: var(--transition);
     border: 1px solid var(--border-light);
     text-align: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .social-item a:hover {
@@ -773,10 +778,10 @@ section h3::after {
 }
 
 .social-item a img {
-    width: 48px !important;
-    height: 48px !important;
-    max-width: 48px !important;
-    margin: 0 auto 12px auto;
+    width: 40px !important;
+    height: 40px !important;
+    max-width: 40px !important;
+    margin: 0 auto 10px auto;
     transition: var(--transition);
     object-fit: contain;
 }
@@ -786,12 +791,16 @@ section h3::after {
 }
 
 .social-item a p {
-    font-size: 0.85rem;
+    font-size: 0.78rem;
     color: var(--text-medium);
     font-weight: 500;
     text-align: center;
     margin: 0;
     word-break: break-word;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
 }
 
 /* ============ CONTACT GROUPS ============ */
@@ -799,9 +808,12 @@ section h3::after {
     background: var(--bg-section);
     border-radius: var(--radius-lg);
     border: 1px solid var(--border-light);
-    padding: 28px 24px;
-    margin-bottom: 24px;
+    padding: 20px 16px;
+    margin-bottom: 20px;
     box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .contact-group-header {
@@ -1168,12 +1180,50 @@ footer {
         font-size: 0.85rem;
     }
 
-    /* Social */
+    /* Social & Contact Groups */
     .social-media-container {
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
     }
 
+    .social-item a {
+        padding: 14px 8px;
+    }
+
+    .social-item a img {
+        width: 32px !important;
+        height: 32px !important;
+        max-width: 32px !important;
+        margin-bottom: 8px;
+    }
+
+    .social-item a p {
+        font-size: 0.72rem;
+    }
+
+    .contact-group {
+        padding: 16px 12px;
+    }
+
+    .contact-group-header {
+        gap: 10px;
+        margin-bottom: 14px;
+    }
+
+    .contact-group-header h4 {
+        font-size: 0.9rem;
+    }
+
+    .group-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .group-icon-emoji {
+        font-size: 1.5rem;
+    }
+
+    /* Social */
     .social-card {
         padding: 18px 12px;
         border-radius: var(--radius-md);
@@ -1228,8 +1278,23 @@ footer {
         min-height: 260px;
     }
 
-    .social-media .social-media {
-        grid-template-columns: 1fr;
+    .social-media-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
+    }
+
+    .social-item a {
+        padding: 12px 6px;
+    }
+
+    .social-item a img {
+        width: 28px !important;
+        height: 28px !important;
+        max-width: 28px !important;
+    }
+
+    .social-item a p {
+        font-size: 0.68rem;
     }
 
     .description ul {
