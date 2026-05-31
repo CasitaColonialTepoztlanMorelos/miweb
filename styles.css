@@ -946,16 +946,17 @@ footer {
 @media (max-width: 1024px) {
     .gallery img {
         height: 240px;
+    header {
+        padding: 8px 0;
+        margin-bottom: 0; /* don't overlap hero on mobile */
     }
-}
 
-@media (max-width: 900px) {
-    .parallax-band {
-        background-attachment: scroll;
+    .header-flex {
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        padding: 8px 0;
     }
-}
-
-/* Tablet portrait (≤768px) */
 @media (max-width: 768px) {
 
     /* Header & Nav */
@@ -970,10 +971,12 @@ footer {
     }
     header h1 {
         font-family: var(--font-display);
-        font-size: 1.2rem;
+        font-size: 1rem;
         letter-spacing: 1px;
-        margin-bottom: 8px;
+        margin-bottom: 4px;
     }
+
+    .brand-sub { display: none; }
 
     /* Horizontally scrollable nav */
     header nav {
@@ -993,8 +996,8 @@ footer {
     header nav ul {
         display: flex;
         flex-wrap: nowrap;
-        gap: 6px;
-        padding: 4px 10px;
+        gap: 8px;
+        padding: 6px 8px;
         min-width: max-content;
     }
 
@@ -1003,8 +1006,8 @@ footer {
     }
 
     header nav ul li a {
-        font-size: 0.8rem;
-        padding: 8px 14px;
+        font-size: 0.9rem;
+        padding: 6px 10px;
         white-space: nowrap;
     }
 
@@ -1017,12 +1020,15 @@ footer {
     .hero,
     .hero .hero-slider,
     .hero .hero-slider img {
-        height: 55vh;
-        min-height: 260px;
+        height: 48vh;
+        min-height: 240px;
     }
 
+    .hero .hero-content h2 { font-size: clamp(1.6rem, 4.2vw, 2.4rem); line-height:1.05; }
+    .hero .hero-content p { font-size: 0.98rem; margin: 8px 0 14px; }
+
     .hero-actions { flex-direction: column; align-items: stretch; gap: 10px; }
-    .hero-actions .btn { width: 100%; padding: 12px 16px; justify-content: center; }
+    .hero-actions .btn { width: 100%; padding: 10px 14px; justify-content: center; font-size: 0.98rem; }
 
     /* Sections */
     section {
