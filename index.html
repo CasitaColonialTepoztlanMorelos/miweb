@@ -71,7 +71,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -83,8 +83,10 @@
             <span class="bubble"></span>
             <span class="bubble"></span>
         </div>
-        <div class="container">
-            <h1>HOSPEDAJE CASITA COLONIAL TEPOZTLAN MORELOS</h1>
+        <div class="container header-flex">
+            <div class="brand-cta">
+                <h1>CASITA COLONIAL</h1>
+            </div>
 
             <div class="nav-wrapper">
                 <nav>
@@ -97,70 +99,11 @@
                     </ul>
                 </nav>
 
-                <!-- Menú de Idiomas Personalizado con Banderas -->
-                <div class="custom-lang-dropdown" id="langDropdown">
-                    <button class="lang-btn" id="langBtn" aria-label="Seleccionar idioma">
-                        <span class="lang-flag" id="currentFlag">🇲🇽</span>
-                        <span class="lang-text" id="currentLang">Español</span>
-                        <span class="lang-arrow">▼</span>
-                    </button>
-                    <ul class="lang-menu" id="langMenu">
-                        <li onclick="changeLanguage('es', '🇲🇽', 'Español')"><span class="lang-flag">🇲🇽</span>
-                            Español</li>
-                        <li onclick="changeLanguage('en', '🇺🇸', 'English')"><span class="lang-flag">🇺🇸</span>
-                            English</li>
-                        <li onclick="changeLanguage('fr', '🇫🇷', 'Français')"><span class="lang-flag">🇫🇷</span>
-                            Français</li>
-                        <li onclick="changeLanguage('de', '🇩🇪', 'Deutsch')"><span class="lang-flag">🇩🇪</span>
-                            Deutsch</li>
-                        <li onclick="changeLanguage('pt', '🇧🇷', 'Português')"><span class="lang-flag">🇧🇷</span>
-                            Português</li>
-                    </ul>
-                </div>
             </div>
-
-            <!-- Widget Oculto de Traducción -->
-            <div id="google_translate_element" style="display:none;"></div>
-            <script type="text/javascript">
-                function googleTranslateElementInit() {
-                    new google.translate.TranslateElement({
-                        pageLanguage: 'es',
-                        includedLanguages: 'es,en,fr,de,pt',
-                        autoDisplay: false
-                    }, 'google_translate_element');
-                }
-
-                function changeLanguage(langCode, flag, name) {
-                    document.getElementById('currentFlag').innerText = flag;
-                    document.getElementById('currentLang').innerText = name;
-                    document.getElementById('langMenu').classList.remove('show');
-
-                    var selectField = document.querySelector(".goog-te-combo");
-                    if (selectField) {
-                        selectField.value = langCode;
-                        selectField.dispatchEvent(new Event('change'));
-                    }
-                }
-
-                // Toggle dropdown menu
-                document.getElementById('langBtn').addEventListener('click', function (e) {
-                    e.stopPropagation();
-                    document.getElementById('langMenu').classList.toggle('show');
-                });
-
-                // Close dropdown when clicking outside
-                window.addEventListener('click', function (e) {
-                    if (!document.getElementById('langDropdown').contains(e.target)) {
-                        document.getElementById('langMenu').classList.remove('show');
-                    }
-                });
-            </script>
-            <script type="text/javascript"
-                src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
         </div>
     </header>
 
-    <section class="hero">
+    <section class="hero reveal">
         <div class="overlay"></div>
         <div class="hero-slider">
             <div><img src="imagenes_hospedaje\x0.webp" alt="Hotel Image 1"></div>
@@ -170,10 +113,15 @@
         </div>
         <div class="hero-content">
             <h2 id="hero-animated-text">HOSPEDAJE CASITA COLONIAL TEPOZTLAN MORELOS</h2>
+            <p class="hero-sub">Hospedaje Casita Colonial en Tepoztlán con alberca climatizada, terraza privada y vista al Tepozteco.</p>
+            <div class="hero-actions">
+                <a class="btn btn-primary" href="#redes-sociales">Consultar disponibilidad</a>
+                <a class="btn btn-secondary" href="#galeria">Ver espacios</a>
+            </div>
         </div>
     </section>
 
-    <section id="descripcion" class="description">
+    <section id="descripcion" class="description parallax-band parallax-1 reveal">
         <div class="container">
             <h3>Descripción del Hospedaje</h3>
             <p><strong>Ubicación:</strong> México, Tepoztlán Morelos.</p>
@@ -200,53 +148,53 @@
         </div>
     </section>
 
-    <section id="galeria" class="rooms">
+    <section id="galeria" class="rooms parallax-band parallax-2 reveal">
         <div class="container">
             <h3>RECAMARAS</h3>
             <h4>Recámara 1</h4>
             <div class="gallery">
-                <div><img loading="lazy" src="imagenes_hospedaje/R1.1.jpg" alt="Recámara 1 - 1"></div>
-                <div><img src="imagenes_hospedaje/R1.2.jpg" alt="Recámara 1 - 2"></div>
-                <div><img src="imagenes_hospedaje/R1.3.jpg" alt="Recámara 1 - 3"></div>
-                <div><img src="imagenes_hospedaje/R1.4.jpg" alt="Recámara 1 - 4"></div>
+                <div><img loading="lazy" decoding="async" src="imagenes_hospedaje/R1.1.webp" alt="Recámara 1 - 1"></div>
+                <div><img loading="lazy" decoding="async" src="imagenes_hospedaje/R1.2.webp" alt="Recámara 1 - 2"></div>
+                <div><img loading="lazy" decoding="async" src="imagenes_hospedaje/R1.3.webp" alt="Recámara 1 - 3"></div>
+                <div><img loading="lazy" decoding="async" src="imagenes_hospedaje/R1.4.webp" alt="Recámara 1 - 4"></div>
             </div>
 
             <h4>Recámara 2</h4>
             <div class="gallery">
-                <div><img loading="lazy" src="imagenes_hospedaje\rom2.webp" alt="Recámara 2 - 1"></div>
-                <div><img src="imagenes_hospedaje\rom2.6.jpeg" alt="Recámara 2 - 2"></div>
-                <div><img src="imagenes_hospedaje\rom2.2.jpeg" alt="Recámara 2 - 3"></div>
-                <div><img src="imagenes_hospedaje\rom2.5.jpeg" alt="Recámara 2 - 3"></div>
+                <div><img loading="lazy" decoding="async" src="imagenes_hospedaje/rom2.webp" alt="Recámara 2 - 1"></div>
+                <div><img loading="lazy" decoding="async" src="imagenes_hospedaje/rom2.6.webp" alt="Recámara 2 - 2"></div>
+                <div><img loading="lazy" decoding="async" src="imagenes_hospedaje/rom2.2.webp" alt="Recámara 2 - 3"></div>
+                <div><img loading="lazy" decoding="async" src="imagenes_hospedaje/rom2.5.webp" alt="Recámara 2 - 3"></div>
             </div>
 
             <h4>Cocina</h4>
             <div class="gallery">
-                <div><img loading="lazy" src="imagenes_hospedaje\cocina1.1.jpeg" alt="Cocina - 1"></div>
-                <div><img src="imagenes_hospedaje\cocina1.3.jpeg" alt="Cocina - 2"></div>
-                <div><img src="imagenes_hospedaje\cocina1.2.jpeg" alt="Cocina - 3"></div>
-                <div><img src="imagenes_hospedaje\cocina1.4.jpeg" alt="Cocina - 3"></div>
+                <div><img loading="lazy" decoding="async" src="imagenes_hospedaje/cocina1.1.webp" alt="Cocina - 1"></div>
+                <div><img loading="lazy" decoding="async" src="imagenes_hospedaje/cocina1.3.webp" alt="Cocina - 2"></div>
+                <div><img loading="lazy" decoding="async" src="imagenes_hospedaje/cocina1.2.webp" alt="Cocina - 3"></div>
+                <div><img loading="lazy" decoding="async" src="imagenes_hospedaje/cocina1.4.webp" alt="Cocina - 3"></div>
             </div>
 
             <h4>Alberca/Terraza</h4>
             <div class="gallery">
-                <div><img loading="lazy" src="imagenes_hospedaje\p1.webp" alt="Alberca - 1"></div>
-                <div><img src="imagenes_hospedaje\p2.webp" alt="Alberca - 2"></div>
-                <div><img src="imagenes_hospedaje\p3.webp" alt="Alberca - 3"></div>
-                <div><img src="imagenes_hospedaje\p4.webp" alt="Alberca - 4"></div>
-                <div><img src="imagenes_hospedaje\p5.webp" alt="Alberca - 5"></div>
-                <div><img src="imagenes_hospedaje\p6.webp" alt="Alberca - 6"></div>
-                <div><img src="imagenes_hospedaje\p7.webp" alt="Alberca - 7"></div>
-                <div><img src="imagenes_hospedaje\p8.webp" alt="Alberca - 8"></div>
-                <div><img src="imagenes_hospedaje\p9.webp" alt="Alberca - 9"></div>
-                <div><img src="imagenes_hospedaje\p10.webp" alt="Alberca - 10"></div>
-                <div><img src="imagenes_hospedaje\p11.webp" alt="Alberca - 11"></div>
-                <div><img src="imagenes_hospedaje\p12.webp" alt="Alberca - 12"></div>
+                <div><img loading="lazy" decoding="async" src="imagenes_hospedaje/p1.webp" alt="Alberca - 1"></div>
+                <div><img loading="lazy" decoding="async" src="imagenes_hospedaje/p2.webp" alt="Alberca - 2"></div>
+                <div><img loading="lazy" decoding="async" src="imagenes_hospedaje/p3.webp" alt="Alberca - 3"></div>
+                <div><img loading="lazy" decoding="async" src="imagenes_hospedaje/p4.webp" alt="Alberca - 4"></div>
+                <div><img loading="lazy" decoding="async" src="imagenes_hospedaje/p5.webp" alt="Alberca - 5"></div>
+                <div><img loading="lazy" decoding="async" src="imagenes_hospedaje/p6.webp" alt="Alberca - 6"></div>
+                <div><img loading="lazy" decoding="async" src="imagenes_hospedaje/p7.webp" alt="Alberca - 7"></div>
+                <div><img loading="lazy" decoding="async" src="imagenes_hospedaje/p8.webp" alt="Alberca - 8"></div>
+                <div><img loading="lazy" decoding="async" src="imagenes_hospedaje/p9.webp" alt="Alberca - 9"></div>
+                <div><img loading="lazy" decoding="async" src="imagenes_hospedaje/p10.webp" alt="Alberca - 10"></div>
+                <div><img loading="lazy" decoding="async" src="imagenes_hospedaje/p11.webp" alt="Alberca - 11"></div>
+                <div><img loading="lazy" decoding="async" src="imagenes_hospedaje/p12.webp" alt="Alberca - 12"></div>
             </div>
         </div>
     </section>
 
     <!-- ===== SECCIÓN DE RESEÑAS ===== -->
-    <section id="resenas" class="reviews-section">
+    <section id="resenas" class="reviews-section parallax-band parallax-3 reveal">
         <div class="container">
 
             <!-- Encabezado con logos duales -->
@@ -491,7 +439,7 @@
     </section>
     <!-- ===== FIN RESEÑAS ===== -->
 
-    <section id="normas" class="rules">
+    <section id="normas" class="rules parallax-band parallax-4 reveal">
         <div class="container">
             <h3>NORMAS Y RECOMENDACIONES DE "CASITA COLONIAL TEPOZTLAN MORELOS"</h3>
             <details class="rules-accordion">
@@ -533,11 +481,38 @@
         </div>
     </section>
 
-    <section id="redes-sociales" class="social-media">
+    <section id="redes-sociales" class="social-media parallax-band parallax-5 reveal">
         <div class="container">
             <h3>RESERVA TU ESTANCIA, pregunta por disponibilidad y precios</h3>
 
-            <!-- Grupo 1: Airbnb -->
+                <!-- Formulario de consulta rápida -->
+                <form id="reserveForm" class="reserve-form" onsubmit="return false;" aria-label="Formulario de consulta de reserva">
+                    <label class="reserve-field">
+                        <span>Fecha de entrada</span>
+                        <input type="date" id="checkin" name="checkin" aria-label="Fecha de entrada">
+                    </label>
+                    <label class="reserve-field">
+                        <span>Fecha de salida</span>
+                        <input type="date" id="checkout" name="checkout" aria-label="Fecha de salida">
+                    </label>
+                    <select id="guests" name="guests" aria-label="Número de huéspedes">
+                        <option value="1">1 huésped</option>
+                        <option value="2">2 huéspedes</option>
+                        <option value="3">3 huéspedes</option>
+                        <option value="4">4 huéspedes</option>
+                        <option value="5">5 huéspedes</option>
+                        <option value="6">6 huéspedes</option>
+                        <option value="7">7 huéspedes</option>
+                        <option value="8">8 huéspedes</option>
+                        <option value="9">9 huéspedes</option>
+                        <option value="10">10 huéspedes</option>
+                    </select>
+                    <input type="text" id="rname" name="rname" placeholder="Nombre (opcional)" aria-label="Nombre">
+                    <input type="text" id="message" name="message" placeholder="Mensaje / consulta (ej. preguntar precio)" aria-label="Mensaje">
+                    <button type="button" id="reserveSubmit" class="btn btn-primary">Consultar precios y disponibilidad</button>
+                </form>
+
+                <!-- Grupo 1: Airbnb -->
             <div class="contact-group">
                 <div class="contact-group-header airbnb-header">
                     <img src="iconos/airbnb.png" alt="Airbnb" class="group-icon"
@@ -611,7 +586,7 @@
         </div>
     </section>
 
-    <section class="developer-promo">
+    <section class="developer-promo parallax-band parallax-6 reveal">
         <div class="container">
             <h3>¿Te gustó esta página web?</h3>
             <p><strong>Promoción de Negocios Locales en Tepoztlán:</strong> ¿Tienes un negocio (restaurante, tour,
@@ -629,6 +604,10 @@
     <footer>
         <p>&copy; 2026 Casita Colonial Tepoztlán Morelos. Todos los derechos reservados.</p>
     </footer>
+
+    <button id="scrollTopBtn" aria-label="Subir arriba">↑</button>
+
+    <a class="reserve-float" href="https://api.whatsapp.com/send?phone=5217771254813&text=%C2%A1Hola%21+Quiero+reservar+la+Casita+Colonial." target="_blank" rel="noopener noreferrer" aria-label="Reservar">Reservar</a>
 
     <div id="myModal" class="modal">
         <span class="close" aria-label="Cerrar modal">&times;</span>
@@ -680,6 +659,8 @@
                     slidesToScroll: 1,
                     autoplay: true,
                     autoplaySpeed: 2000,
+                    lazyLoad: 'ondemand',
+                    speed: 400,
                     dots: true,
                     arrows: true,
                     responsive: [
@@ -747,6 +728,29 @@
                 });
             }
         });
+    </script>
+
+    <script>
+    // Scroll reveal + scroll-to-top
+    (function(){
+        const reveals = document.querySelectorAll('.reveal');
+        const io = new IntersectionObserver((entries)=>{
+            entries.forEach(e=>{
+                if(e.isIntersecting){
+                    e.target.classList.add('show');
+                    io.unobserve(e.target);
+                }
+            });
+        },{threshold:0.12});
+        reveals.forEach(r=>io.observe(r));
+
+        // Scroll to top button
+        const btn = document.getElementById('scrollTopBtn');
+        window.addEventListener('scroll',()=>{
+            if(window.scrollY>400) btn.classList.add('visible'); else btn.classList.remove('visible');
+        });
+        btn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+    })();
     </script>
 
     <!-- Script carrusel de reseñas -->
@@ -834,6 +838,30 @@
         updateTrack();
     })();
     </script>
+
+        <script>
+        // Formulario de reserva: construir mensaje y abrir WhatsApp
+        (function(){
+            function buildMessage() {
+                const checkin = document.getElementById('checkin').value || '-';
+                const checkout = document.getElementById('checkout').value || '-';
+                const guests = document.getElementById('guests').value || '-';
+                const name = document.getElementById('rname').value || '-';
+                const msg = document.getElementById('message').value || 'Consulta por disponibilidad y precios';
+                return `¡Hola! Estoy interesado en reservar Casita Colonial.\nFechas: ${checkin} al ${checkout}\nHuéspedes: ${guests}\nNombre: ${name}\nConsulta: ${msg}`;
+            }
+
+            const btn = document.getElementById('reserveSubmit');
+            if(btn){
+                btn.addEventListener('click', function(){
+                    const text = buildMessage();
+                    const phone = '5217771254813';
+                    const url = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(text)}`;
+                    window.open(url, '_blank');
+                });
+            }
+        })();
+        </script>
 
 </body>
 
