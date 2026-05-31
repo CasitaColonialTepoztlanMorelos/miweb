@@ -964,7 +964,12 @@ footer {
     header {
         padding: 12px 0;
     }
-
+    .header-flex {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 10px 0;
+    }
     header h1 {
         font-family: var(--font-display);
         font-size: 1.2rem;
@@ -1005,13 +1010,21 @@ footer {
         white-space: nowrap;
     }
 
+    /* Make nav easier to tap and flow on mobile */
+    .nav-wrapper { width: 100%; }
+    header nav ul { justify-content: flex-start; padding-left: 6px; }
+    header nav ul li a { padding: 10px 12px; font-size: 0.95rem; }
+
     /* Hero */
     .hero,
     .hero .hero-slider,
     .hero .hero-slider img {
-        height: 65vh;
-        min-height: 350px;
+        height: 55vh;
+        min-height: 260px;
     }
+
+    .hero-actions { flex-direction: column; align-items: stretch; gap: 10px; }
+    .hero-actions .btn { width: 100%; padding: 12px 16px; justify-content: center; }
 
     /* Sections */
     section {
@@ -1126,6 +1139,14 @@ footer {
         height: 200px;
         border-radius: var(--radius-sm);
     }
+
+    /* Tighter gallery sizes for small screens */
+    .gallery img { height: 160px; }
+
+    /* Reserve form adjustments */
+    .reserve-form { grid-template-columns: 1fr; gap: 12px; }
+    .reserve-form input, .reserve-form select, .reserve-form textarea { padding: 12px; font-size: 0.98rem; }
+    .reserve-form button.btn-primary { width: 100%; padding: 12px; font-size: 1rem; }
 
     .gallery .slick-slide {
         padding: 0 4px;
