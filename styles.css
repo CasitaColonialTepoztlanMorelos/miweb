@@ -946,17 +946,16 @@ footer {
 @media (max-width: 1024px) {
     .gallery img {
         height: 240px;
-    header {
-        padding: 8px 0;
-        margin-bottom: 0; /* don't overlap hero on mobile */
     }
+}
 
-    .header-flex {
-        flex-direction: column;
-        align-items: center;
-        gap: 6px;
-        padding: 8px 0;
+@media (max-width: 900px) {
+    .parallax-band {
+        background-attachment: scroll;
     }
+}
+
+/* Tablet portrait (≤768px) */
 @media (max-width: 768px) {
 
     /* Header & Nav */
@@ -971,12 +970,10 @@ footer {
     }
     header h1 {
         font-family: var(--font-display);
-        font-size: 1rem;
+        font-size: 1.2rem;
         letter-spacing: 1px;
-        margin-bottom: 4px;
+        margin-bottom: 8px;
     }
-
-    .brand-sub { display: none; }
 
     /* Horizontally scrollable nav */
     header nav {
@@ -996,8 +993,8 @@ footer {
     header nav ul {
         display: flex;
         flex-wrap: nowrap;
-        gap: 8px;
-        padding: 6px 8px;
+        gap: 6px;
+        padding: 4px 10px;
         min-width: max-content;
     }
 
@@ -1006,8 +1003,8 @@ footer {
     }
 
     header nav ul li a {
-        font-size: 0.9rem;
-        padding: 6px 10px;
+        font-size: 0.8rem;
+        padding: 8px 14px;
         white-space: nowrap;
     }
 
@@ -1020,15 +1017,18 @@ footer {
     .hero,
     .hero .hero-slider,
     .hero .hero-slider img {
-        height: 48vh;
-        min-height: 240px;
+        height: 55vh;
+        min-height: 260px;
     }
 
-    .hero .hero-content h2 { font-size: clamp(1.6rem, 4.2vw, 2.4rem); line-height:1.05; }
-    .hero .hero-content p { font-size: 0.98rem; margin: 8px 0 14px; }
-
-    .hero-actions { flex-direction: column; align-items: stretch; gap: 10px; }
-    .hero-actions .btn { width: 100%; padding: 10px 14px; justify-content: center; font-size: 0.98rem; }
+    .hero-actions { flex-direction: column; align-items: center; gap: 10px; }
+    .hero-actions .btn {
+        width: auto;
+        min-width: 210px;
+        max-width: 250px;
+        padding: 10px 14px;
+        justify-content: center;
+    }
 
     /* Sections */
     section {
@@ -1079,6 +1079,55 @@ footer {
         right: 18px;
         font-size: 32px;
     }
+}
+
+/* Extra small screens tweaks (phones) */
+@media (max-width: 480px) {
+    /* Header: smaller brand and compact spacing */
+    header h1 {
+        font-size: 0.95rem !important;
+        letter-spacing: 1px;
+    }
+    .brand-sub { font-size: 0.7rem !important; }
+    .header-flex { padding: 8px 12px !important; }
+
+    /* Nav: make items smaller and allow wrapping below brand without overlap */
+    header nav ul { gap: 8px; padding: 6px; }
+    header nav ul li a { font-size: 0.86rem !important; padding: 8px 10px !important; }
+
+    /* Hero: reduce headline size and increase spacing from top */
+    .hero .hero-content {
+        top: 46% !important;
+        transform: translate(-50%, -46%) !important;
+        width: calc(100% - 40px) !important;
+        padding: 0 12px !important;
+    }
+    .hero .hero-content h2 {
+        font-size: clamp(1.5rem, 6vw, 2.4rem) !important;
+        line-height: 1.06 !important;
+    }
+    .hero .hero-content p.hero-sub { font-size: 0.95rem !important; margin-top: 10px !important; }
+
+    /* CTA buttons: full width, smaller, less tall */
+    .hero-actions { gap: 8px !important; }
+    .hero-actions .btn {
+        width: auto !important;
+        min-width: 180px !important;
+        max-width: 220px !important;
+        padding: 8px 12px !important;
+        font-size: 0.78rem !important;
+        min-height: 36px;
+        border-radius: 999px;
+    }
+
+    /* Gallery: reduce card heights to avoid heavy repainting */
+    .gallery img { height: 140px !important; }
+
+    /* Ensure reserve floating button doesn't overlap content */
+    .wa-float { right: 14px; bottom: 88px; }
+
+    /* Adjust modal image max-height for small screens */
+    .modal-content { max-height: 70vh; }
 }
 
 /* Floating reserve button */
